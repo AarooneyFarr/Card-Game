@@ -6,4 +6,9 @@
 //  Copyright © 2016 Farr, Aaron. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class card
+{
+     
+}
