@@ -69,12 +69,31 @@ class PlayingCard : card
         suit = ""
     }
     
+    override func toString() ->String
+    {
+        let facing : String
+        
+        if self.isUp()
+        {
+            facing = " is face up"
+            
+        }
+        else
+        {
+            facing = " is face down"
+        }
+        
+        let description = "This PlayingCard has a face value of \(rank), and a color of\(color), the back image is\(self.getBackImage) and is of suit \(suit) suit and is \(facing)"
+        return description
+    }
+    
    func getRank() ->Int
    {
     return self.rank
    }
-    func setRank(rank: Int)
-    {
+    
+   func setRank(rank: Int)
+   {
         self.rank = rank
     }
     
