@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2467E24F1DC7889500BA087B /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467E24E1DC7889500BA087B /* Deck.swift */; };
+		2467E2511DC789A200BA087B /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467E2501DC789A200BA087B /* PlayingCardDeck.swift */; };
 		24A20B521DBFAD5E0069D504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A20B511DBFAD5E0069D504 /* AppDelegate.swift */; };
 		24A20B571DBFAD5E0069D504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A20B551DBFAD5E0069D504 /* Main.storyboard */; };
 		24A20B591DBFAD5E0069D504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A20B581DBFAD5E0069D504 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2467E24E1DC7889500BA087B /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		2467E2501DC789A200BA087B /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		24A20B4E1DBFAD5E0069D504 /* Card Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A20B511DBFAD5E0069D504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A20B561DBFAD5E0069D504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			children = (
 				24A20B651DBFAE3F0069D504 /* Card.swift */,
 				24A20B671DBFAE6E0069D504 /* PlayingCard.swift */,
+				2467E24E1DC7889500BA087B /* Deck.swift */,
+				2467E2501DC789A200BA087B /* PlayingCardDeck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			files = (
 				24E073391DC251C600E2DA51 /* CardGameController.swift in Sources */,
 				24A20B661DBFAE3F0069D504 /* Card.swift in Sources */,
+				2467E24F1DC7889500BA087B /* Deck.swift in Sources */,
+				2467E2511DC789A200BA087B /* PlayingCardDeck.swift in Sources */,
 				24A20B681DBFAE6E0069D504 /* PlayingCard.swift in Sources */,
 				24A20B521DBFAD5E0069D504 /* AppDelegate.swift in Sources */,
 			);
