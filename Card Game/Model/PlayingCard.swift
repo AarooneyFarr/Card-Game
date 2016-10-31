@@ -11,7 +11,7 @@ import UIKit
 
 class PlayingCard : card
 {
-    private var rank : Int
+    internal var rank : Int
     {
         get
         {
@@ -24,7 +24,7 @@ class PlayingCard : card
         
     }
     
-    private var suit : String
+    internal var suit : String
     {
         get
         {
@@ -37,7 +37,7 @@ class PlayingCard : card
         }
     }
     
-    private var color : UIColor
+    internal var color : UIColor
     {
         get
         {
@@ -49,7 +49,7 @@ class PlayingCard : card
         }
     }
     
-    private var frontImage : UIImage
+    internal var frontImage : UIImage
     {
         get{
             return self.frontImage
@@ -104,6 +104,22 @@ class PlayingCard : card
    func setRank(rank: Int)
    {
         self.rank = rank
+    }
+    
+    //The modifier class in front of func means that this mthod is visible
+    //without creating an instance of the class in question
+    class func validRanks() -> [String]
+    {
+        return ["??","A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+    }
+    class func validSuits() -> [String]
+    {
+        return ["♥️","♠️","♦️","♣️"]
+    }
+    
+    class func maxRank() -> Int
+    {
+        return validRanks().count - 1
     }
     
 }
