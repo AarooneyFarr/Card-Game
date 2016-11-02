@@ -12,70 +12,34 @@ import UIKit
 class PlayingCard : card
 {
     internal var rank : Int
-    {
-        get
-        {
-            return self.rank
-        }
-        set(rank)
-        {
-            self.rank = rank
-        }
-        
-    }
+    
     
     internal var suit : String
-    {
-        get
-        {
-            return self.suit
-        }
-        set(suit)
-        {
-            self.suit = suit
-            
-        }
-    }
+    
     
     internal var color : UIColor
-    {
-        get
-        {
-            return self.color
-        }
-        set(color)
-        {
-            self.color = color
-        }
-    }
+    
     
     internal var frontImage : UIImage
-    {
-        get{
-            return self.frontImage
-        }
-        set(frontImage){
-            self.frontImage = frontImage
-            
-        }
-    }
     
     override init()
     {
+        
+        self.frontImage = UIImage(named: "coded with love")!
+        self.color = UIColor.redColor()
+        self.rank = 0
+        self.suit = String()
         super.init()
-        frontImage = UIImage(named: "coded with love")!
-        color = UIColor.redColor()
-        rank = 0
-        suit = String()
     }
     
     init(withRank: Int, ofSuit: String)
     {
+        
+        self.frontImage = UIImage(named: "coded with love")!
+        self.color = UIColor.redColor()
+        self.rank = 0
+        self.suit = String()
         super.init()
-        frontImage = UIImage(named: "coded with love")!
-        color = UIColor.redColor()
-        rank = 0
-        suit = String()
     }
     
     override func toString() ->String
@@ -104,6 +68,32 @@ class PlayingCard : card
    func setRank(rank: Int)
    {
         self.rank = rank
+    }
+    func getSuit() -> String
+    {
+        return self.suit
+    }
+    func setSuit(suit: String)
+    {
+        self.suit = suit
+    }
+    func getColor() ->UIColor
+    {
+        return self.color
+        
+    }
+    func setColor(color: UIColor)
+    {
+        self.color = color
+    }
+    func getFrontImage() -> UIImage
+    {
+        return frontImage
+        
+    }
+    func setFrontImage(frontImage: UIImage)
+    {
+        self.frontImage = frontImage
     }
     
     //The modifier class in front of func means that this mthod is visible
