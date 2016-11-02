@@ -10,5 +10,10 @@ import UIKit
 
 class CardGameController : UIViewController
 {
-    
+    override func viewDidLoad()
+    {
+        let tempCard = Card()
+        print(tempCard.toString())
+        let otherTemp = 
+    }
 }

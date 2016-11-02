@@ -8,7 +8,7 @@
 
 import UIKit
 
-class card
+class Card
 {
     private var backImage : UIImage
     {
