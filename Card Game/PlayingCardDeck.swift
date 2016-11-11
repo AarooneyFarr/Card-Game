@@ -6,12 +6,12 @@
 //  Copyright © 2016 Farr, Aaron. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-class PlayingCardDeck : Deck
+class PlayingCardDeck : Deck 
 {
-    lazy var cards = [PlayingCard]()
+     lazy var playingCards = [PlayingCard]()
     
     override init()
     {
@@ -23,7 +23,7 @@ class PlayingCardDeck : Deck
             {
                 let currentCard = PlayingCard(withRank: rank, ofSuit: suit)
                 
-                cards.append(currentCard)
+                playingCards.append(currentCard)
             }
         }
         var test = PlayingCard()
