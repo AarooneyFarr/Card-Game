@@ -26,8 +26,8 @@ class PlayingCardDeck : Deck
                 playingCards.append(currentCard)
             }
         }
-        var test = PlayingCard()
-        test.suit = "ads"
+        //var test = PlayingCard()
+        //test.suit = "ads"
         
     }
     

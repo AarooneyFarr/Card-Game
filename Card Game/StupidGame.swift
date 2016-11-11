@@ -15,12 +15,14 @@ class StupidGame
     lazy var turn = 1;
     lazy var players = 4;
     lazy var handSize = 5;
-    lazy var stupidDeck = [Deck]()
+    internal var stupidDeck : PlayingCardDeck
+    internal var hand : [PlayingCard]
     
     //inits
     init()
     {
-        Deck.shuffleDeck()
+        self.stupidDeck = PlayingCardDeck()
+        self.hand = [PlayingCard]()
         
         
     }
@@ -28,7 +30,11 @@ class StupidGame
     //Methods
     func startGame() -> Void
     {
-        
+        stupidDeck.shuffleDeck()
+        while(handSize<hand.count)
+        {
+            hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        }
     }
     
     
