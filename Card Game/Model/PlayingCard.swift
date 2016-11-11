@@ -9,7 +9,7 @@
 import UIKit
 
 
-class PlayingCard : card
+class PlayingCard : Card
 {
     internal var rank : Int
     
@@ -90,6 +90,10 @@ class PlayingCard : card
     {
         return frontImage
         
+    }
+    func getCardData() -> String{
+        let data = "\(PlayingCard.validRanks()[rank]) \(suit)"
+        return data
     }
     func setFrontImage(frontImage: UIImage)
     {

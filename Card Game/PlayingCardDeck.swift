@@ -23,7 +23,7 @@ class PlayingCardDeck : Deck
             {
                 let currentCard = PlayingCard(withRank: rank, ofSuit: suit)
                 
-                self.cards.append(currentCard)
+                cards.append(currentCard)
             }
         }
         var test = PlayingCard()
@@ -31,10 +31,7 @@ class PlayingCardDeck : Deck
         
     }
     
-    func shuffleDeck() -> Void
-    {
-        
-    }
+    
     
     func orderDeck() -> Void
     {
