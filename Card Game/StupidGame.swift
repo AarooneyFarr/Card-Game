@@ -40,10 +40,19 @@ class StupidGame
     func drawCards() -> Void
     {
         
-        
-        hand.append((stupidDeck.drawRandomCard() as? PlayingCard)!)
-        hand.append((stupidDeck.drawRandomCard() as? PlayingCard)!)
-        hand.append((stupidDeck.drawRandomCard() as? PlayingCard)!)
+       if(stupidDeck.cards.count > 2)
+       {
+        hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        }
+        else
+       {
+        self.stupidDeck = PlayingCardDeck()
+        hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        hand.append((stupidDeck.drawCard() as? PlayingCard)!)
+        }
         
     }
     func checkMatch()-> Bool
@@ -72,17 +81,19 @@ class StupidGame
             }
             else
             {
-                score -= 2
+                score -= 1
             }
         }
         
         hand.removeAll()
+        drawCards()
        
     }
     
     func getScore() -> String
     {
-      //  var scoreString = String(score)
-        return String(hand.count)
+        var scoreString = String(score)
+        return scoreString
     }
+    
 }

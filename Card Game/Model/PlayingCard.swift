@@ -56,7 +56,7 @@ class PlayingCard : Card
             facing = " face down"
         }
         
-        let description = "This Playing Card has a face value of \(rank), and a color of \(color), the back image is \(self.getBackImage) and is of suit \(self.suit) suit and is \(facing)"
+        let description = "This Playing Card has a face value of \(self.rank), and a color of \(self.color), the back image is \(self.getBackImage) and is of suit \(self.suit) suit and is \(facing)"
         return description
     }
     
@@ -91,7 +91,8 @@ class PlayingCard : Card
         return frontImage
         
     }
-    func getCardData() -> String{
+    func getCardData() -> String
+    {
         let data = "\(PlayingCard.validRanks()[rank]) \(suit)"
         return data
     }
@@ -104,7 +105,7 @@ class PlayingCard : Card
     //without creating an instance of the class in question
     class func validRanks() -> [String]
     {
-        return ["??","A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+        return ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
     }
     class func validSuits() -> [String]
     {
