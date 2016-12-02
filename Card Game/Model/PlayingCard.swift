@@ -37,8 +37,8 @@ class PlayingCard : Card
         
         self.frontImage = UIImage(named: "coded with love")!
         self.color = UIColor.redColor()
-        self.rank = 0
-        self.suit = String()
+        self.rank = withRank
+        self.suit = ofSuit
         super.init()
     }
     
@@ -48,15 +48,15 @@ class PlayingCard : Card
         
         if self.isUp()
         {
-            facing = " is face up"
+            facing = " face up"
             
         }
         else
         {
-            facing = " is face down"
+            facing = " face down"
         }
         
-        let description = "This PlayingCard has a face value of \(rank), and a color of\(color), the back image is\(self.getBackImage) and is of suit \(suit) suit and is \(facing)"
+        let description = "This Playing Card has a face value of \(rank), and a color of \(color), the back image is \(self.getBackImage) and is of suit \(self.suit) suit and is \(facing)"
         return description
     }
     
