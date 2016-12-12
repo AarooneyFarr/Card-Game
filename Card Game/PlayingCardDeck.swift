@@ -19,14 +19,14 @@ class PlayingCardDeck : Deck
         
         for suit in PlayingCard.validSuits()
         {
-            for var rank = 1; rank < PlayingCard.maxRank(); rank += 1
+            for rank in 1 ..< PlayingCard.maxRank()
             {
                 let currentCard = PlayingCard(withRank: rank, ofSuit: suit)
                 
                 self.cards.append(currentCard)
             }
         }
-        var test = PlayingCard()
+        let test = PlayingCard()
         test.suit = "ads"
         
     }
@@ -38,6 +38,26 @@ class PlayingCardDeck : Deck
     
     func orderDeck() -> Void
     {
+        var temp = [PlayingCard]()
+        for suit in PlayingCard.validSuits()
+        {
+            for (var rank = 1; rank <= PlayingCard.maxRank(); rank += 1)
+            {
+                let index = cards.index(where:
+                    {
+                        ($0 as! PlayingCard).suit == suit && ($0 as!
+                            PlayingCard).rank == rank
+                })
+                let tempCard = cards.remove(at: index!) as! PlayingCard
+                temp.append(tempCard)
+            }
+        }
+        
+    }
+    
+    func drawRandomCard() -> PlayingCard
+    {
+        
         
     }
 }

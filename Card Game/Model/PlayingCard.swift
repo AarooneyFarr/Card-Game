@@ -9,7 +9,7 @@
 import UIKit
 
 
-class PlayingCard : card
+class PlayingCard : Card
 {
     internal var rank : Int
     
@@ -26,7 +26,7 @@ class PlayingCard : card
     {
         
         self.frontImage = UIImage(named: "coded with love")!
-        self.color = UIColor.redColor()
+        self.color = UIColor.red
         self.rank = 0
         self.suit = String()
         super.init()
@@ -36,7 +36,7 @@ class PlayingCard : card
     {
         
         self.frontImage = UIImage(named: "coded with love")!
-        self.color = UIColor.redColor()
+        self.color = UIColor.red
         self.rank = 0
         self.suit = String()
         super.init()
@@ -65,7 +65,7 @@ class PlayingCard : card
     return self.rank
    }
     
-   func setRank(rank: Int)
+   func setRank(_ rank: Int)
    {
         self.rank = rank
     }
@@ -73,7 +73,7 @@ class PlayingCard : card
     {
         return self.suit
     }
-    func setSuit(suit: String)
+    func setSuit(_ suit: String)
     {
         self.suit = suit
     }
@@ -82,7 +82,7 @@ class PlayingCard : card
         return self.color
         
     }
-    func setColor(color: UIColor)
+    func setColor(_ color: UIColor)
     {
         self.color = color
     }
@@ -91,7 +91,7 @@ class PlayingCard : card
         return frontImage
         
     }
-    func setFrontImage(frontImage: UIImage)
+    func setFrontImage(_ frontImage: UIImage)
     {
         self.frontImage = frontImage
     }
