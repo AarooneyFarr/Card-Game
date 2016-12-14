@@ -37,8 +37,8 @@ class PlayingCard : Card
         
         self.frontImage = UIImage(named: "coded with love")!
         self.color = UIColor.red
-        self.rank = 0
-        self.suit = String()
+        self.rank = withRank
+        self.suit = ofSuit
         super.init()
     }
     
@@ -56,8 +56,14 @@ class PlayingCard : Card
             facing = " is face down"
         }
         
-        let description = "This PlayingCard has a face value of \(rank), and a color of\(color), the back image is\(self.getBackImage) and is of suit \(suit) suit and is \(facing)"
+        let description = "This PlayingCard has a face value of \(rank), and a color of\(color), and is of suit \(suit) suit and is \(facing)"
         return description
+    }
+    
+    func getCardData() -> String
+    {
+        let data = "\(PlayingCard.validRanks()[self.rank])\(self.suit)"
+        return data
     }
     
    func getRank() ->Int

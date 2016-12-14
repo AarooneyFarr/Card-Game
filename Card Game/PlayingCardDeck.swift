@@ -11,7 +11,7 @@ import Foundation
 
 class PlayingCardDeck : Deck
 {
-    lazy var cards = [PlayingCard]()
+    lazy var pCards = [PlayingCard]()
     
     override init()
     {
@@ -23,7 +23,7 @@ class PlayingCardDeck : Deck
             {
                 let currentCard = PlayingCard(withRank: rank, ofSuit: suit)
                 
-                self.cards.append(currentCard)
+                self.pCards.append(currentCard)
             }
         }
         let test = PlayingCard()
@@ -31,33 +31,26 @@ class PlayingCardDeck : Deck
         
     }
     
-    func shuffleDeck() -> Void
-    {
-        
-    }
+    
     
     func orderDeck() -> Void
     {
         var temp = [PlayingCard]()
         for suit in PlayingCard.validSuits()
         {
-            for (var rank = 1; rank <= PlayingCard.maxRank(); rank += 1)
+            
+            for rank in 1 ..< PlayingCard.maxRank()
             {
-                let index = cards.index(where:
+                let index = pCards.index(where:
                     {
-                        ($0 as! PlayingCard).suit == suit && ($0 as!
-                            PlayingCard).rank == rank
+                        ($0).suit == suit && ($0).rank == rank
                 })
-                let tempCard = cards.remove(at: index!) as! PlayingCard
+                let tempCard = pCards.remove(at: index!)
                 temp.append(tempCard)
             }
         }
         
     }
     
-    func drawRandomCard() -> PlayingCard
-    {
-        
-        
-    }
+   
 }

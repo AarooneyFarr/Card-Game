@@ -12,7 +12,6 @@
 		24A20B521DBFAD5E0069D504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A20B511DBFAD5E0069D504 /* AppDelegate.swift */; };
 		24A20B571DBFAD5E0069D504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A20B551DBFAD5E0069D504 /* Main.storyboard */; };
 		24A20B591DBFAD5E0069D504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A20B581DBFAD5E0069D504 /* Assets.xcassets */; };
-		24A20B5C1DBFAD5E0069D504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A20B5A1DBFAD5E0069D504 /* LaunchScreen.storyboard */; };
 		24A20B661DBFAE3F0069D504 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A20B651DBFAE3F0069D504 /* Card.swift */; };
 		24A20B681DBFAE6E0069D504 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A20B671DBFAE6E0069D504 /* PlayingCard.swift */; };
 		24E073391DC251C600E2DA51 /* CardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E073381DC251C600E2DA51 /* CardGameController.swift */; };
@@ -25,7 +24,6 @@
 		24A20B511DBFAD5E0069D504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A20B561DBFAD5E0069D504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24A20B581DBFAD5E0069D504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		24A20B5B1DBFAD5E0069D504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24A20B5D1DBFAD5E0069D504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A20B651DBFAE3F0069D504 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Model/Card.swift; sourceTree = "<group>"; };
 		24A20B671DBFAE6E0069D504 /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCard.swift; path = Model/PlayingCard.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			children = (
 				24A20B551DBFAD5E0069D504 /* Main.storyboard */,
 				24A20B581DBFAD5E0069D504 /* Assets.xcassets */,
-				24A20B5A1DBFAD5E0069D504 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -127,7 +124,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Farr, Aaron";
 				TargetAttributes = {
 					24A20B4D1DBFAD5E0069D504 = {
@@ -160,7 +157,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A20B5C1DBFAD5E0069D504 /* LaunchScreen.storyboard in Resources */,
 				24A20B591DBFAD5E0069D504 /* Assets.xcassets in Resources */,
 				24A20B571DBFAD5E0069D504 /* Main.storyboard in Resources */,
 			);
@@ -193,14 +189,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		24A20B5A1DBFAD5E0069D504 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24A20B5B1DBFAD5E0069D504 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -217,8 +205,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -262,8 +252,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -282,6 +274,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

@@ -32,7 +32,7 @@ class CardGameController : UIViewController
         
         if let currentCard = currentDeck.drawRandomCard() as? PlayingCard
         {
-            cardButton.setTitle("\(currentCard.getCardData())", forState: UIControlState.Normal)
+            cardButton.setTitle("\(currentCard.getCardData())", for: UIControlState.normal)
         }
         else
         {
